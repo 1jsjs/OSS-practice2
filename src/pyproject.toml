@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "role-assignment-teaching-pack"
+version = "0.1.0"
+description = "Teaching package for OpenAI role-assignment examples."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=2.30.0",
+  "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+role-assignment = "role_assignment.main:main"
+role-lesson-01 = "role_assignment.lessons.lesson01_baseline:main"
+role-lesson-02 = "role_assignment.lessons.lesson02_teacher_role:main"
+role-lesson-03 = "role_assignment.lessons.lesson03_reviewer_role:main"
+role-lesson-04 = "role_assignment.lessons.lesson04_planner_role:main"
+role-lesson-05 = "role_assignment.lessons.lesson05_tone_control:main"
+role-lesson-06 = "role_assignment.lessons.lesson06_format_control:main"
+role-lesson-07 = "role_assignment.lessons.lesson07_messages_teacher:main"
+role-lesson-08 = "role_assignment.lessons.lesson08_messages_reviewer:main"
+role-lesson-09 = "role_assignment.lessons.lesson09_same_prompt_compare:main"
+role-lesson-10 = "role_assignment.lessons.lesson10_audience_role:main"
+role-lesson-11 = "role_assignment.lessons.lesson11_license_advisor:main"
+role-lesson-12 = "role_assignment.lessons.lesson12_quiz_maker_role:main"
+role-lesson-13 = "role_assignment.lessons.lesson13_debate_roles:main"
+role-lesson-14 = "role_assignment.lessons.lesson14_rubric_grader:main"
+role-lesson-15 = "role_assignment.lessons.lesson15_mini_workflow:main"
+
+my-role-lesson-01 = "role_assignment.my_lessons.lesson01_baseline:main"
+my-role-lesson-02 = "role_assignment.my_lessons.lesson02_teacher_role:main"
+my-role-lesson-03 = "role_assignment.my_lessons.lesson03_reviewer_role:main"
+my-role-lesson-04 = "role_assignment.my_lessons.lesson04_planner_role:main"
+my-role-lesson-05 = "role_assignment.my_lessons.lesson05_tone_control:main"
+my-role-lesson-06 = "role_assignment.my_lessons.lesson06_format_control:main"
+my-role-lesson-07 = "role_assignment.my_lessons.lesson07_messages_teacher:main"
+my-role-lesson-08 = "role_assignment.my_lessons.lesson08_messages_reviewer:main"
+my-role-lesson-09 = "role_assignment.my_lessons.lesson09_same_prompt_compare:main"
+my-role-lesson-10 = "role_assignment.my_lessons.lesson10_audience_role:main"
+my-role-lesson-11 = "role_assignment.my_lessons.lesson11_strategy_pattern:main"
+my-role-lesson-12 = "role_assignment.my_lessons.lesson12_factory_pattern:main"
+my-role-lesson-13 = "role_assignment.my_lessons.lesson13_debate_roles:main"
+my-role-lesson-14 = "role_assignment.my_lessons.lesson14_rubric_grader:main"
+my-role-lesson-15 = "role_assignment.my_lessons.lesson15_mini_workflow:main"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["role_assignment"]
